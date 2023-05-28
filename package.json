@@ -1,0 +1,27 @@
+{
+  "name": "yusuf-musbeh-nodejs-sec",
+  "version": "1.0.0",
+  "description": "\"# Yusuf-Musbeh-NodeJS-sec\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JSD-0423/Yusuf-Musbeh-NodeJS-sec.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "fs"
+  ],
+  "author": "Yusuf Musbeh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JSD-0423/Yusuf-Musbeh-NodeJS-sec/issues"
+  },
+  "homepage": "https://github.com/JSD-0423/Yusuf-Musbeh-NodeJS-sec#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

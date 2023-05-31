@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.nav-bar {
+  background-color: #0e4749;
+}
+.nav-bar-items {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  padding: 1rem;
+}
+.nav-bar-items li a:hover {
+  color: #95c623;
+}
+
+a {
+  text-decoration: none;
+  color: #e55812;
+}
+
+.active {
+  color: #95c623;
+}
+main {
+  margin-top: 1rem;
+}
+/* books page */
+.main-padding {
+  padding-inline: 1rem;
+}
+.page-title {
+  color: #e55812;
+}
+.page-subtitle {
+  color: #0e4749;
+  font-size: 1.5rem;
+}
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e4749;
+  padding-inline: 1rem;
+  width: 15rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.card a {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* add book page */
+form {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 20rem;
+  gap: 1rem;
+}
+input {
+  border-radius: 0.2rem;
+  border: 2px solid #0e4749;
+  padding-block: 0.5rem;
+}
+button {
+  background-color: #0e4749;
+  color: #e55812;
+  border: none;
+  padding: 0.5rem;
+  width: 8rem;
+  font-size: 1.2rem;
+}

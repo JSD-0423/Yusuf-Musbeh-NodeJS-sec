@@ -75,6 +75,16 @@ button {
   color: #e55812;
   border: none;
   padding: 0.5rem;
+  border-radius: 0.5rem;
   width: 8rem;
   font-size: 1.2rem;
+}
+
+.error-message {
+  padding: 1rem;
+  width: 10rem;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.5rem;
 }

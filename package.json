@@ -22,5 +22,10 @@
     "url": "https://github.com/JSD-0423/Yusuf-Musbeh-NodeJS-sec/issues"
   },
   "homepage": "https://github.com/JSD-0423/Yusuf-Musbeh-NodeJS-sec#readme",
-  "dependencies": {}
+  "dependencies": {
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }

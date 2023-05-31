@@ -24,10 +24,11 @@ exports.getBookById = (request, response) => {
   response.end(renderedTemplate);
 };
 
-exports.getAddBook = (request, response) => {
+exports.getAddBook = (request, response, message) => {
   const template = pug.compileFile("./views/add-book.pug");
   const renderedTemplate = template({
     path: "/add-books",
+    message: message,
   });
   response.writeHead(200, { "content-type": "text/html" });
   response.end(renderedTemplate);
@@ -46,6 +47,9 @@ exports.postBooks = (request, response) => {
       .slice(body.indexOf("="))
       .replaceAll("+", " ")
       .replace("=", "");
+    if (!name) {
+      return this.getAddBook(request, response, "Book name is required");
+    }
     const books = getDataFromFile();
     books.push({ id: id, name: name });
     fs.writeFileSync("./data/books.json", JSON.stringify(books));

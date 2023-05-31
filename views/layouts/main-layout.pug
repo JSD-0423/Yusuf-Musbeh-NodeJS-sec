@@ -4,14 +4,15 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/public/main.css")
     body 
         header 
-            nav.nav-bar
+            nav.nav-bar.main-padding
                 ul.nav-bar-items
                     li 
                         a(href="/", class =(path==="/books"? "active":"") ) books 
                     li 
                         a(href="/add-book" class =(path==="/add-books"? "active":"")) Add book 
 
-        main 
+        main.main-padding
            block content 

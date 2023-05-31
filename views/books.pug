@@ -1,8 +1,8 @@
 extends layouts/main-layout.pug
 
 block content 
-    h1 books
-    p List of all the books
-    ul
+    h1.page-title books
+    p.page-subtitle List of all the books
+    div.books
         each book in books
-             li: a(href="/books/"+book.id)  #{book.name}
+             dev.card: p: a(href="/books/"+book.id)  #{book.name}

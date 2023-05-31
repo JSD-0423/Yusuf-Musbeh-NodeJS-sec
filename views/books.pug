@@ -4,5 +4,8 @@ block content
     h1.page-title books
     p.page-subtitle List of all the books
     div.books
-        each book in books
-             dev.card: p: a(href="/books/"+book.id)  #{book.name}
+        if books.length==0
+            p No books Found
+        else 
+            each book in books
+                dev.card: p: a(href="/books/"+book.id)  #{book.name}

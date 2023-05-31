@@ -4,3 +4,4 @@ block content
     form(action="/books", method="post")
         input(type="text", name="name" placeholder="Book Title" required )
         button(type="submit") Add Book
+        div.error-message #{message}    

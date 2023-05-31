@@ -1,6 +1,7 @@
 const http = require("http");
 const booksRoute = require("./routes/books-route");
 const errorRoute = require("./routes/error-route");
+const publicRoute = require("./routes/public-route");
 const pug = require("pug");
 const redirect = require("./utils/redirect");
 
@@ -10,7 +11,10 @@ const HOSTNAME = "localhost";
 const requestHandler = (request, response) => {
   console.log(request.url);
   if (request.url == "/") {
-    redirect(request, response, "books");
+    return redirect(request, response, "books");
+  }
+  if (request.url.startsWith("/public")) {
+    return publicRoute(request, response);
   }
 
   booksRoute(request, response);

@@ -7,7 +7,7 @@ const redirect = require("../utils/redirect");
 exports.getBooks = (request, response) => {
   const books = getDataFromFile();
   const template = pug.compileFile("./views/books.pug");
-  const renderedTemplate = template({ books: books });
+  const renderedTemplate = template({ books: books, path: "/books" });
   response.writeHead(200, "good", { "content-type": "text/html" });
   response.end(renderedTemplate);
 };
@@ -18,6 +18,7 @@ exports.getBookById = (request, response) => {
   const template = pug.compileFile("./views/book.pug");
   const renderedTemplate = template({
     book: book[0],
+    path: "/books",
   });
   response.writeHead(200, { "content-type": "text/html" });
   response.end(renderedTemplate);
@@ -25,7 +26,9 @@ exports.getBookById = (request, response) => {
 
 exports.getAddBook = (request, response) => {
   const template = pug.compileFile("./views/add-book.pug");
-  const renderedTemplate = template();
+  const renderedTemplate = template({
+    path: "/add-books",
+  });
   response.writeHead(200, { "content-type": "text/html" });
   response.end(renderedTemplate);
 };

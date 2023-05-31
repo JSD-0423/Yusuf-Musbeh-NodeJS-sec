@@ -1,0 +1,8 @@
+extends layouts/main-layout.pug
+
+block content 
+    h1 books
+    p List of all the books
+    ul
+        each book in books
+             li: a(href="/books/"+book.id)  #{book.name}

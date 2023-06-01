@@ -1,5 +1,9 @@
 extends layouts/main-layout.pug
 
 block content
-    p.page-subtitle book 
-    dev.card: p: a(href="#")  #{book.name}
+    if(book)
+        p.page-subtitle book 
+        dev.card: p: a(href="#")  #{book.name}
+    else 
+        p.error-message 
+            span Book Not Found

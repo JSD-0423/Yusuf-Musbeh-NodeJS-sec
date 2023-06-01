@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #131516;
 }
 .nav-bar {
   background-color: #0e4749;
@@ -35,7 +36,7 @@ main {
   color: #e55812;
 }
 .page-subtitle {
-  color: #0e4749;
+  color: white;
   font-size: 1.5rem;
 }
 .books {

@@ -4,6 +4,7 @@ const crypto = require("crypto");
 const pug = require("pug");
 const redirect = require("../utils/redirect");
 const errorRoute = require("../routes/error-route");
+
 exports.getBooks = (request, response) => {
   try {
     const books = getDataFromFile();
@@ -20,10 +21,10 @@ exports.getBooks = (request, response) => {
 exports.getBookById = (request, response) => {
   try {
     const id = request.url.slice(7);
-    const book = getDataFromFile().filter((book) => book.id == id);
+    const book = getDataFromFile().find((book) => book.id == id);
     const template = pug.compileFile("./views/book.pug");
     const renderedTemplate = template({
-      book: book[0],
+      book: book,
       path: "/books",
     });
     response.writeHead(200, { "content-type": "text/html" });

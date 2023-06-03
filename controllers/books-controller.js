@@ -71,7 +71,7 @@ exports.postBooks = (request, response) => {
       books.push({ id: id, name: name });
       fs.writeFileSync("./data/books.json", JSON.stringify(books));
 
-      redirect(request, response, "add-book");
+      redirect(request, response, "books");
     });
   } catch (e) {
     console.error(e);
